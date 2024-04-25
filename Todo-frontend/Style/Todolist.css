@@ -1,0 +1,75 @@
+.tasklist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    border-top: 2px solid #000;
+    padding: 30px;
+}
+
+.tasklist ul {
+    list-style: none;
+    width: 70%;
+}
+
+.tasklist ul li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 14px;
+    font-weight: bolder;
+    transition: .4s;
+    user-select: none;
+}
+
+.tasklist ul li .checkicon {
+    visibility: hidden;
+    margin-right: 10px; 
+}
+
+.tasklist ul li .greenCheck {
+    color: green;
+    margin-right: 10px;
+    margin-top: 9px; 
+}
+
+.tasklist ul li.strike .checkicon {
+    visibility: visible;
+}
+
+.tasklist ul li .tasktext {
+    margin: 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.tasklist ul li.strike .tasktext {
+    text-decoration: line-through;
+    color: black;
+}
+
+.tasklist ul li .edit,
+.tasklist ul li .closes{
+    margin-left: 10px;
+}
+
+.tasklist ul li .edit:hover {
+    background-color: blue;
+    color: white;
+}
+
+.tasklist ul li .closes:hover {
+    background-color: red;
+    color: white;
+}
+
+.tasklist ul li:nth-child(odd) {
+    background-color: antiquewhite;
+}
+
+.tasklist ul li:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
